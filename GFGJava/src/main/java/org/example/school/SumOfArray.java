@@ -1,4 +1,4 @@
-package org.example;
+package org.example.school;
 
 public class SumOfArray {
     public static void main(String[] args) {
