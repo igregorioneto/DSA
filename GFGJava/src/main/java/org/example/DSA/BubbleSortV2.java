@@ -1,4 +1,4 @@
-package org.example.DSA.sorting_and_searching;
+package org.example.DSA;
 
 import java.util.Arrays;
 import java.util.Scanner;
