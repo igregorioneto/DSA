@@ -20,5 +20,42 @@ public class Program {
             System.out.println(lista.get(i).getValor());
         }
         System.out.println("==================================");
+        System.out.println("=========      FILA     ==========");
+        System.out.println("==================================");
+
+        Fila fila = new Fila();
+        fila.adicionar("Jão");
+        fila.adicionar("Zé");
+        fila.adicionar("Juca");
+        fila.adicionar("Maria");
+        fila.adicionar("Ana");
+
+        System.out.println("Primeiro da fila:" + fila.get());
+        fila.remover();
+        System.out.println("Novo Primeiro da fila:" + fila.get());
+        fila.remover();
+        System.out.println("Novo Primeiro da fila:" + fila.get());
+
+        System.out.println("==================================");
+        System.out.println("=========     PILHA    ===========");
+        System.out.println("==================================");
+
+        Pilha pilha = new Pilha();
+
+        pilha.adicionar("E");
+        pilha.adicionar("B");
+        pilha.adicionar("Z");
+        pilha.adicionar("D");
+        pilha.adicionar("C");
+
+        System.out.println("Topo: " + pilha.get());
+
+        pilha.remover();
+
+        System.out.println("Novo Topo: " + pilha.get());
+
+        pilha.remover();
+
+        System.out.println("Novo Topo: " + pilha.get());
     }
 }

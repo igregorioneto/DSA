@@ -45,6 +45,18 @@ public class LinkedList {
         this.tamanho++;
     }
 
+    public void adicionarPilha(String valor) {
+        Elemento novoElemento = new Elemento(valor);
+        if (this.primeiro == null && this.ultimo == null) {
+            this.primeiro = novoElemento;
+            this.ultimo = novoElemento;
+        } else {
+            novoElemento.setProximo(this.primeiro);
+            this.primeiro = novoElemento;
+        }
+        this.tamanho++;
+    }
+
     public void remover(String novoValor) {
         Elemento anterior = null;
         Elemento atual = this.primeiro;
@@ -55,7 +67,7 @@ public class LinkedList {
                     this.ultimo = null;
                 } else if (atual == this.primeiro) {
                     this.primeiro = atual.getProximo();
-                    this.primeiro.setProximo(null);
+                    atual.setProximo(null);
                 } else if (atual == ultimo) {
                     this.ultimo = atual;
                     anterior.setProximo(null);
@@ -80,4 +92,5 @@ public class LinkedList {
         }
         return atual;
     }
+
 }
