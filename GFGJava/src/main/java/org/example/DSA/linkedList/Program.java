@@ -57,5 +57,19 @@ public class Program {
         pilha.remover();
 
         System.out.println("Novo Topo: " + pilha.get());
+
+
+        System.out.println("==================================================");
+        System.out.println("=========     ITERATOR LISTA LIGADA    ===========");
+        System.out.println("==================================================");
+
+        long tempoInicial = System.currentTimeMillis();
+        ItaratorListaLigada itaratorListaLigada = lista.getIterator();
+        while (itaratorListaLigada.temProximo()) {
+            itaratorListaLigada.getProximo();
+        }
+        long tempoFinal = System.currentTimeMillis();
+        System.out.println("\n\nTempo de leitura...");
+        System.out.println(tempoFinal - tempoInicial);
     }
 }

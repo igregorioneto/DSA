@@ -93,4 +93,8 @@ public class LinkedList {
         return atual;
     }
 
+    public ItaratorListaLigada getIterator() {
+        return new ItaratorListaLigada(this.primeiro);
+    }
+
 }
