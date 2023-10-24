@@ -46,6 +46,26 @@ public class BinarySearchTree {
         }
     }
 
+    public boolean isBST(Node root) {
+        return isBTSUtil(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
+    }
+
+    private boolean isBTSUtil(Node root, int minValue, int maxValue) {
+        if (root == null) {
+            return false;
+        }
+
+        if (root.data < minValue || root.data > maxValue) {
+            return false;
+        }
+
+        boolean isBTSLeft = isBTSUtil(root.left, minValue, root.data - 1);
+
+        boolean isBTSRight = isBTSUtil(root.right, root.data + 1, maxValue);
+
+        return isBTSLeft && isBTSRight;
+    }
+
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(10);
@@ -59,5 +79,7 @@ public class BinarySearchTree {
         System.out.println("Árvore Binária de Busca (inorder traversal):");
         tree.inorderTraversal(tree.root);
         System.out.println();
+
+        System.out.println("É uma BST: " + tree.isBST(tree.root));
     }
 }
