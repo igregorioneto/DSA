@@ -14,6 +14,10 @@ public class Arvore<T extends Comparable> {
         this.raiz = null;
     }
 
+    public Elemento<T> getRaiz() {
+        return raiz;
+    }
+
     /*
     * Método para adicionar um elemento a uma árvore
     * Ele irá percorrer uma arvore com base no valor passado para poder adicionar
@@ -44,6 +48,56 @@ public class Arvore<T extends Comparable> {
                     }
                 }
             }
+        }
+    }
+
+    /*
+    * Imprimindo os valores em ordem crescente
+    * @param Elemento<T> atual que a partir dele virá a ordem
+    * */
+    public void emOrdem(Elemento<T> atual) {
+        if (atual != null) {
+            emOrdem(atual.getEsquerda());
+            System.out.print(atual.getValor() + " ");
+            emOrdem(atual.getDireita());
+        }
+    }
+
+    /*
+     * Imprimindo os valores em ordem decrescente
+     * @param Elemento<T> atual que a partir dele virá a ordem
+     * */
+    public void emOrdemDecrescente(Elemento<T> atual) {
+        if (atual != null) {
+            emOrdemDecrescente(atual.getDireita());
+            System.out.print(atual.getValor() + " ");
+            emOrdemDecrescente(atual.getEsquerda());
+        }
+    }
+
+
+    /*
+     * Imprimindo primeiro a raíz da árvore para depois as folhas
+     * @param Elemento<T> atual que a partir dele virá a ordem
+     * */
+    public void preOrdem(Elemento<T> atual) {
+        if (atual != null) {
+            System.out.print(atual.getValor() + " ");
+            preOrdem(atual.getEsquerda());
+            preOrdem(atual.getDireita());
+        }
+    }
+
+
+    /*
+     * Imprimindo primeiro as folhas para depois a raiz
+     * @param Elemento<T> atual que a partir dele virá a ordem
+     * */
+    public void posOrdem(Elemento<T> atual) {
+        if (atual != null) {
+            posOrdem(atual.getEsquerda());
+            posOrdem(atual.getDireita());
+            System.out.print(atual.getValor() + " ");
         }
     }
 }
