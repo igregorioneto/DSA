@@ -113,7 +113,7 @@ public class Arvore<T extends Comparable> {
         while (atual != null) {
             if (atual.getValor().equals(valor)) {
                 break;
-8            } else if (valor.compareTo(atual.getValor()) == -1) {
+            } else if (valor.compareTo(atual.getValor()) == -1) {
                 paiAtual = atual;
                 atual = atual.getEsquerda();
             } else {
