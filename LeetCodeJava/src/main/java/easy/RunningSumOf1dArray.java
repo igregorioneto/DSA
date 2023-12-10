@@ -1,4 +1,4 @@
-package beginners;
+package easy;
 
 public class RunningSumOf1dArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package beginners;
+package easy;
 
 public class NumberOfStepsToReduceANumberToZero {
     public static void main(String[] args) {

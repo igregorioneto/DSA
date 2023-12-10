@@ -1,4 +1,4 @@
-package beginners;
+package easy;
 
 public class RichestCustomerWealth {
     public static void main(String[] args) {
