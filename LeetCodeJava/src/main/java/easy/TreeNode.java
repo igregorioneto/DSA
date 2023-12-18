@@ -21,9 +21,10 @@ public class TreeNode {
 
     private static void displayOrderTreeNode(TreeNode current, List<Integer> arr) {
          if (current != null) {
+             arr.add(current.val);
              displayOrderTreeNode(current.left, arr);
 //             System.out.print(current.val);
-             arr.add(current.val);
+
              displayOrderTreeNode(current.right, arr);
          }
     }
